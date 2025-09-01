@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+  line-height: 1.5;
+  color: hsl(212, 27%, 19%);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+img {
+  min-width: 100%;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+header, .arrow{
+  background: url("./images/mobile/image-header.jpg") no-repeat center/cover;
+}
+header ul {
+  display: none; 
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+}
+header li {
+  margin: 0 1rem;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+header li:last-child {
+  background-color: hsl(51, 100%, 49%);
+  color: hsl(212, 27%, 19%);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+}
+.more:hover ul{
+  display: block;
+  background-color: hsl(0, 0%, 98%);
+  padding: 1rem;
+  position: absolute;
+  right: 15%;
+}
+.more ul a{
+  text-decoration: none;
+  color: black;
+}
+.more ul li{
+  padding-bottom: 0.5rem;
+  display: flex;
+  gap: 1rem;
+}
+.arrow {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.arrow h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 5px;
+  margin-bottom: 2rem;
+}
+.arrow img {
+  width: 30px;
+}
+.pics {
+  display: flex;
+  flex-direction: column;
+}
+.pics figure{
+  width: 100%;
+}
+.pics figure img{
+  width: 100%;
+}
+.pics h3 {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.notes{
+  padding: 2.5rem 1.5rem;
+  margin-bottom: 1rem;
+  color: hsl(212, 27%, 19%);
+  background-color: white;
+}
+.pics button {
+  border: none;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+.transform{
+  text-decoration: underline 0.5rem hsl(51, 100%, 49%);
+}
+.standout{
+  text-decoration: underline 0.4rem hsl(7, 99%, 70%);
+}
+/* .pics figcaption{
+  position: absolute;
+} */
+.head{
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  color: hsl(210, 4%, 67%);
+}
+.clients {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 3rem;
+}
+.clients div{
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: center;
+}
+.clients figure{
+  width: 20%;
+}
+.clients img {
+  border-radius: 50%;
+  width: 100%;
+}
+.clients h4 {
+  font-weight: 700;
+  color: hsl(212, 27%, 19%);
+}
+.clients h5 {
+  color: hsl(210, 4%, 67%);
+}
+.lastpics {
+  display: grid;
+  grid-template-columns: repeat(2,50%);
+}
+.lastpics figure img {
+  width: 100%;
+  height: 100%;
+}
+footer {
+  background: hsl(167, 34%, 41%);
+  padding: 2rem;
+  color: hsl(167, 40%, 24%);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.logo{
+  width: 50%;
+  color: hsl(167, 40%, 24%);
+  display: flex;
+  align-items: center;
+}
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+footer li {
+  cursor: pointer;
+  font-weight: 600;
+}
+footer .contact {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  header li:last-child {
+  background-color: white;
+  }
+  .more figure{
+    display: none;
+  }
+  .more ul{
+    display: flex;
+  }
+  .more:hover ul{
+    display: none;
+  }
+  .pics {
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+  }
+  .pics div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+  }
+  .clients {
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+  }
+  .lastpics{
+    display: flex;
+  }
+}
+@media (min-width: 1024px) {
+  header li:last-child {
+  background-color: white;
+  }
+  .more figure{
+    display: none;
+  }
+  .more ul{
+    display: flex;
+  }
+  .more:hover ul{
+    display: none;
+  }
+  header, .arrow{
+    background: url("./images/desktop/image-header.jpg") no-repeat center/cover;
+  }
+  .arrow h2 {
+    font-size: 3rem;
+  }
+  .pics {
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+  }
+  .pics h3 {
+    font-size: 2rem;
+  }
+  .clients {
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+  }
+  .lastpics{
+    display: flex;
+  }
+  .lastpics img{
+    width: 100%;
+  }
+}
