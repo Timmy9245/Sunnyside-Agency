@@ -7,9 +7,10 @@ body {
   text-align: center;
   line-height: 1.5;
   color: hsl(212, 27%, 19%);
+}
+main{
   display: flex;
   flex-direction: column;
-  gap: 2rem;
 }
 img {
   min-width: 100%;
@@ -90,7 +91,6 @@ header li:last-child {
 }
 .notes{
   padding: 2.5rem 1.5rem;
-  margin-bottom: 1rem;
   color: hsl(212, 27%, 19%);
   background-color: white;
 }
@@ -107,9 +107,14 @@ header li:last-child {
 .standout{
   text-decoration: underline 0.4rem hsl(7, 99%, 70%);
 }
-/* .pics figcaption{
+.graphic{
   position: absolute;
-} */
+  bottom: 60%;
+}
+.photography{
+  position: relative;
+  bottom: 50%;
+}
 .head{
   text-transform: uppercase;
   letter-spacing: 0.4rem;
@@ -242,6 +247,9 @@ footer .contact {
   }
   .lastpics{
     display: flex;
+  }
+  .lastpics figure{
+    width: 100%;
   }
   .lastpics img{
     width: 100%;
