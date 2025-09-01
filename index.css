@@ -13,15 +13,15 @@ main{
   flex-direction: column;
 }
 img {
-  min-width: 100%;
+  /* min-width: 100%; */
 }
-header {
+.top{
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
 }
-header, .arrow{
+header{
   background: url("./images/mobile/image-header.jpg") no-repeat center/cover;
 }
 header ul {
@@ -84,6 +84,7 @@ header li:last-child {
 }
 .pics figure img{
   width: 100%;
+  height: 100%;
 }
 .pics h3 {
   font-size: 1.5rem;
@@ -107,13 +108,20 @@ header li:last-child {
 .standout{
   text-decoration: underline 0.4rem hsl(7, 99%, 70%);
 }
-.graphic{
-  position: absolute;
-  bottom: 60%;
+.graphics{
+  position: relative;
 }
+/* .graphics figcaption{
+  position: absolute;
+  /* top: 100%; 
+} */
 .photography{
   position: relative;
-  bottom: 50%;
+}
+.photography figcaption,
+.graphics figcaption{
+  position: absolute;
+  bottom: 15%;
 }
 .head{
   text-transform: uppercase;
@@ -160,17 +168,18 @@ footer {
   color: hsl(167, 40%, 24%);
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2rem;
 }
-.logo{
-  width: 50%;
+.logo figure img{
+  width: 30%;
   color: hsl(167, 40%, 24%);
   display: flex;
   align-items: center;
 }
 footer ul {
   display: flex;
-  justify-content: space-between;
+  gap: 3rem;
   list-style: none;
 }
 footer li {
@@ -181,6 +190,12 @@ footer .contact {
   display: flex;
   justify-content: center;
   gap: 1rem;
+}
+footer ul li:hover{
+  color: white;
+}
+footer .contact figure:hover{
+  color: white;
 }
 @media (min-width: 768px) {
   header li:last-child {
@@ -203,7 +218,6 @@ footer .contact {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2rem;
   }
   .clients {
     flex-direction: row;
@@ -227,7 +241,7 @@ footer .contact {
   .more:hover ul{
     display: none;
   }
-  header, .arrow{
+  header{
     background: url("./images/desktop/image-header.jpg") no-repeat center/cover;
   }
   .arrow h2 {
